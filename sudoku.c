@@ -48,6 +48,7 @@ int is_valid(Node* n){
       int filas[10] = {0};
       int columnas[10] = {0};
       for(j=0;j<9;j++){
+        if (n->sudo[i][j] == 0) return 0;
         if (n->sudo[i][j] != 0) {
           if (n->sudo[i][j] == 1) return 0;
           filas[n->sudo[i][j]] = 1;
@@ -55,9 +56,9 @@ int is_valid(Node* n){
         if (n->sudo[i][j] != 0){
           if(columnas[n->sudo[i][j]] == 1) return 0;
           columnas[n->sudo[i][j]] = 1;
-          }
-        }
-       }
+          } 
+      }
+    }
   for (i = 0; i < 9; i++) {
     int submatriz[10] = {0};
     int fila_inicio = (i / 3) * 3;
