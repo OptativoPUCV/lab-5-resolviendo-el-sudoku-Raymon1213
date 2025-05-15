@@ -231,3 +231,19 @@ Thu, May 15, 2025  5:49:31 PM:
  tests:  2|4
 total_score: 15/70
 2fec0b9
+Thu, May 15, 2025  5:52:40 PM: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:56:9: error: redefinition of 'columnas'
+     int columnas[10] = {0};
+         ^~~~~~~~
+sudoku.c:49:9: note: previous definition of 'columnas' was here
+     int columnas[10] = {0};
+         ^~~~~~~~
+sudoku.c:56:9: warning: unused variable 'columnas' [-Wunused-variable]
+     int columnas[10] = {0};
+         ^~~~~~~~
+9fb47c0

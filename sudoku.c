@@ -52,7 +52,8 @@ int is_valid(Node* n){
       filas[n->sudo[i][j]] = 1;
       if(columnas[n->sudo[j][i]] == 1) return 0;
       columnas[n->sudo[j][i]] = 1;
-      }
+    }
+    int columnas[10] = {0};
   }
   for (i = 0; i < 9; i++) {
     int submatriz[10] = {0};
