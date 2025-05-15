@@ -49,14 +49,10 @@ int is_valid(Node* n){
       int columnas[10] = {0};
       for(j=0;j<9;j++){
         if (n->sudo[i][j] == 0) return 0;
-        if (n->sudo[i][j] != 0) {
-          if (n->sudo[i][j] == 1) return 0;
-          filas[n->sudo[i][j]] = 1;
-        }
-        if (n->sudo[i][j] != 0){
-          if(columnas[n->sudo[i][j]] == 1) return 0;
-          columnas[n->sudo[i][j]] = 1;
-          } 
+        if(filas[n->sudo[i][j]] == 1) return 0;
+        filas[n->sudo[i][j]] = 1;
+        if(columnas[n->sudo[i][j]] == 1) return 0;
+        columnas[n->sudo[i][j]] = 1;
       }
     }
   for (i = 0; i < 9; i++) {
