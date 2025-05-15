@@ -59,8 +59,8 @@ int is_valid(Node* n){
         for (int c=0;c<9;c++){
           columnas[n->sudo[i][j]] = 1;
           if (n->sudo[i][j] != n->sudo[i][c]){
-            if(filas[n->sudo[i][c]] == 1) return 0;
-            filas[n->sudo[i][c]] = 1;
+            if(columnas[n->sudo[i][c]] == 1) return 0;
+            columnas[n->sudo[i][c]] = 1;
           }
         }
        }
