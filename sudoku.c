@@ -62,12 +62,10 @@ int is_valid(Node* n){
     for (j = 0; j < 9; j++) {
       int fila = fila_inicio + j / 3;
       int col = col_inicio + j % 3;
-      if (n->sudo[fila][col] != 0) {
-        if (submatriz[n->sudo[fila][col]] == 1) {
-          return 0; 
-        }
-        submatriz[n->sudo[fila][col]] = 1;
-        }
+      if (submatriz[n->sudo[fila][col]] == 1) {
+        return 0; 
+      }
+      submatriz[n->sudo[fila][col]] = 1;
       }
     }
   return 1;
