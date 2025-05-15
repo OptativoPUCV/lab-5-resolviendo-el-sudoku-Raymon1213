@@ -28,7 +28,6 @@ Node* read_file (char* file_name){
             printf("failed to read data!");
        }
   }
-
   fclose (file);
   return n;
 }
