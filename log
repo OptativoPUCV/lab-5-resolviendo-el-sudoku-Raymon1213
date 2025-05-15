@@ -259,3 +259,10 @@ Thu, May 15, 2025  6:00:42 PM:
  tests:  5|3
 total_score: 35/70
 bc06671
+Thu, May 15, 2025  7:48:29 PM: 
+Compilation failed
+test.c:7:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+    7 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+cc1.exe: all warnings being treated as errors
+7d445e9
