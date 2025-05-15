@@ -130,3 +130,14 @@ sudoku.c:49:11: error: variable 'filas' set but not used [-Werror=unused-but-set
            ^~~~~
 cc1.exe: all warnings being treated as errors
 fc1b450
+Thu, May 15, 2025  5:05:42 PM: 
+ sudoku.c | 19 ++++++++++++-------
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:49:11: error: variable 'filas' set but not used [-Werror=unused-but-set-variable]
+       int filas[10] = {0};
+           ^~~~~
+cc1.exe: all warnings being treated as errors
+dd8a9c4

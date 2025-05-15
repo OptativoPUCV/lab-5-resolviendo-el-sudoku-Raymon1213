@@ -61,16 +61,21 @@ int is_valid(Node* n){
           }
         }
        }
-  for (int k=0; k < 9; k++){
-    int p = 0;
+  for (i = 0; i < 9; i++) {
     int submatriz[10] = {0};
-    for(p=0;p<9;p++){
-      int i=3*(k/3) + (p/3) ;
-      int j=3*(k%3) + (p%3) ;
-      if (submatriz[n->sudo[i][j]] == 1) return 0;
-      submatriz[n->sudo[i][j]] = 1;
+    int fila_inicio = (i / 3) * 3;
+    int col_inicio = (i % 3) * 3;
+    for (j = 0; j < 9; j++) {
+      int fila = fila_inicio + j / 3;
+      int col = col_inicio + j % 3;
+      if (n->sudo[fila][col] != 0) {
+        if (submatriz[n->sudo[fila][col]] == 1) {
+          return 0; 
+        }
+        submatriz[n->sudo[fila][col]] = 1;
+        }
       }
-  }
+    }
   return 1;
 }
 
