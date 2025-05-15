@@ -65,6 +65,16 @@ int is_valid(Node* n){
         }
        }
     }
+    for (int k=0; k < 9; k++){
+      int p = 0;
+      int submatriz[10] = {0};
+      for(p=0;p<9;p++){
+        int i=3*(k/3) + (p/3) ;
+        int j=3*(k%3) + (p%3) ;
+        if (submatriz[n->sudo[i][j]] == 1) return 0;
+        submatriz[n->sudo[i][j]] = 1;
+      }
+    }
     return 1;
 }
 
