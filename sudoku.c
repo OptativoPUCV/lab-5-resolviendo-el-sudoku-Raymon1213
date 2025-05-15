@@ -48,9 +48,9 @@ int is_valid(Node* n){
       int filas[10] = {0};
       int columnas[10] = {0};
       for(j=0;j<9;j++){
-        if(filas[n->sudo[i][j]] == 1) return 1;
+        if(filas[n->sudo[i][j]] == 1) return 0;
         filas[n->sudo[i][j]] = 1;
-        if(columnas[n->sudo[j][i]] == 1) return 1;
+        if(columnas[n->sudo[j][i]] == 1) return 0;
         columnas[n->sudo[j][i]] = 1;
       }
     }
@@ -62,18 +62,18 @@ int is_valid(Node* n){
       int fila = fila_inicio + j / 3;
       int col = col_inicio + j % 3;
       if (submatriz[n->sudo[fila][col]] == 1) {
-        return 1; 
+        return 0; 
       }
       submatriz[n->sudo[fila][col]] = 1;
       }
     }
-  return 0;
+  return 1;
 }
 
 
 List* get_adj_nodes(Node* n){
   List* list=createList();
-  if (is_valid(n) == 0) return list;
+  if (is_valid(n) == 1) return list;
   int i,j;
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){
