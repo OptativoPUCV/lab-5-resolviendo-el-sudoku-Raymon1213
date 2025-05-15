@@ -45,8 +45,8 @@ void print_node(Node* n){
 int is_valid(Node* n){
   int i,j;
     for(i=0;i<9;i++){
-      int filas[10] = {0};
-      int columnas[10] = {0};
+      int filas[9] = {0};
+      int columnas[9] = {0};
       for(j=0;j<9;j++){
         if (n->sudo[i][j] == 0) return 0;
         if(filas[n->sudo[i][j]] == 1) return 0;
