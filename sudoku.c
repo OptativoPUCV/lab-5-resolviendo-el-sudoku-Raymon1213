@@ -52,7 +52,7 @@ int is_valid(Node* n){
         for (int f=0;f<9;f++){
           filas[n->sudo[i][j]] = 1;
           if (n->sudo[f][j] != n->sudo[i][j]){
-            if(filas[n->sudo[l][j]] == 1) return 0;
+            if(filas[n->sudo[f][j]] == 1) return 0;
             filas[n->sudo[f][j]] = 1;
           }
         }

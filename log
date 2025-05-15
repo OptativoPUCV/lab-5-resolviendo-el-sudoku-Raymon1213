@@ -87,3 +87,14 @@ sudoku.c:51:13: error: variable 'columnas' set but not used [-Werror=unused-but-
              ^~~~~~~~
 cc1.exe: all warnings being treated as errors
 a73b6c3
+Thu, May 15, 2025  4:50:46 PM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:51:13: error: variable 'columnas' set but not used [-Werror=unused-but-set-variable]
+         int columnas[10] = {0};
+             ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+218a495
