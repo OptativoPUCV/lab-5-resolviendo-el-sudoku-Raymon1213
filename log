@@ -161,3 +161,7 @@ sudoku.c:48:11: error: variable 'filas' set but not used [-Werror=unused-but-set
            ^~~~~
 cc1.exe: all warnings being treated as errors
 f837940
+Thu, May 15, 2025  5:11:29 PM: 
+ tests:  2|4
+total_score: 15/70
+81c59f1
