@@ -290,3 +290,20 @@ Thu, May 15, 2025  8:01:58 PM:
  tests:  5|3
 total_score: 35/70
 e5cbc20
+Thu, May 15, 2025  8:12:30 PM: 
+ sudoku.c | 38 ++++++++++++++++++++++++++++++--------
+ 1 file changed, 30 insertions(+), 8 deletions(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function 'is_valid':
+sudoku.c:62:11: error: redefinition of 'num'
+   62 |       int num = n->sudo[i][j];
+      |           ^~~
+sudoku.c:61:11: note: previous definition of 'num' with type 'int'
+   61 |       int num = n->sudo[i][j];
+      |           ^~~
+test.c: At top level:
+test.c:7:8: warning: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+    7 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+b06c77f

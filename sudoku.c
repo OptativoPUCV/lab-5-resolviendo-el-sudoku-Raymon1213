@@ -42,23 +42,45 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
-  int row[9][10] = {0};
-  int col[9][10] = {0};
-  int box[9][10] = {0};
-  int i,j;
-  for(i=0;i<9;i++){
-    for(j=0;j<9;j++){
+int is_valid(Node* n) {
+  int i, j;
+
+  for (i = 0; i < 9; i++) {
+    int fila[10] = {0};
+    for (j = 0; j < 9; j++) {
       int num = n->sudo[i][j];
-      if(num != 0){
-        if(row[i][num] || col[j][num] || box[(i / 3) * 3 + j / 3][num]) {
-          return 0;
-        }
-      row[i][num] = 1;
-      col[j][num] = 1;
-      box[(i / 3) * 3 + j / 3][num] = 1;
+      if (num != 0) {
+        if (fila[num]) return 0;
+        fila[num] = 1;
       }
     }
+  }
+  for (j = 0; j < 9; j++) {
+    int columna[10] = {0};
+    for (i = 0; i < 9; i++) {
+      int num = n->sudo[i][j];
+      int num = n->sudo[i][j];
+      if (num != 0) {
+        if (columna[num]) return 0;
+        columna[num] = 1;
+      }
+    }
+  }
+  for (int k = 0; k < 3; k++) {
+    for (int p = 0; p < 3; p++) {
+      int submatriz[10] = {0};
+      for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+          int row = k * 3 + i;
+          int col = p * 3 + j;
+          int num = n->sudo[row][col];
+          if (num != 0) {
+            if (submatriz[num]) return 0;
+            submatriz[num] = 1;
+          }
+      }
+    }
+  }
   }
   return 1;
 }
