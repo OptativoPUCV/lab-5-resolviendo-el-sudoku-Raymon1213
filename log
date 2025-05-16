@@ -341,3 +341,12 @@ sudoku.c:145:5: note: previous definition of 'main' with type 'int(int,  char **
       |     ^~~~
 cc1.exe: all warnings being treated as errors
 b40f8af
+Thu, May 15, 2025  8:31:11 PM: 
+ sudoku.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+test.c:7:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+    7 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+cc1.exe: all warnings being treated as errors
+934b82c
