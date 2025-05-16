@@ -383,3 +383,21 @@ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64
 C:/Users/Ramon/Desktop/Lab5/lab-5-resolviendo-el-sudoku-Raymon1213-1/test.c:124:(.text+0x607): undefined reference to `size'
 collect2.exe: error: ld returned 1 exit status
 291a735
+Thu, May 15, 2025  8:34:05 PM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function 'DFS':
+sudoku.c:124:10: warning: implicit declaration of function 'size'; did you mean '_msize'? [-Wimplicit-function-declaration]
+  124 |   while (size(S) != 0) {
+      |          ^~~~
+      |          _msize
+test.c: At top level:
+test.c:7:8: warning: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+    7 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\Users\Ramon\AppData\Local\Temp\ccUMgC80.o: in function `DFS':
+C:/Users/Ramon/Desktop/Lab5/lab-5-resolviendo-el-sudoku-Raymon1213-1/test.c:124:(.text+0x607): undefined reference to `size'
+collect2.exe: error: ld returned 1 exit status
+8523aeb
