@@ -119,12 +119,29 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack* S = createStack();
+  push(S, initial);
+  while (_msize(S) != 0) {
+        (*cont)++;
+        Node* n = top(S);
+
+        if (is_final(n)) {
+            return n;
+        }
+
+        List* adj = get_adj_nodes(n);
+        Node* aux = first(adj);
+
+        while (aux) {
+            push(S, aux);
+            aux = next(adj);
+        }
+        pop(S);
+    }
   return NULL;
 }
 
 
-
-/*
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -135,4 +152,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
