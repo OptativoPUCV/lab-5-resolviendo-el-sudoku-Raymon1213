@@ -70,9 +70,9 @@ int is_valid(Node* n) {
       int submatriz[10] = {0};
       for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
-          int row = k * 3 + i;
+          int fila = k * 3 + i;
           int col = p * 3 + j;
-          int num = n->sudo[row][col];
+          int num = n->sudo[fila][col];
           if (num != 0) {
             if (submatriz[num]) return 0;
             submatriz[num] = 1;
