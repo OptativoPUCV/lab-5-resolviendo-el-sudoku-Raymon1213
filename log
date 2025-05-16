@@ -401,3 +401,9 @@ C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64
 C:/Users/Ramon/Desktop/Lab5/lab-5-resolviendo-el-sudoku-Raymon1213-1/test.c:124:(.text+0x607): undefined reference to `size'
 collect2.exe: error: ld returned 1 exit status
 8523aeb
+Thu, May 15, 2025  8:41:02 PM: 
+ sudoku.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ tests:  10|0
+total_score: 70/70
+9fd62d2
